@@ -1,0 +1,67 @@
+.waterBody {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(73, 73, 73);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.waterBody .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.waterBody .container h1 {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 25rem;
+  color: rgba(255, 255, 255, 0.1);
+  background-image: url("/images/waves3.png");
+  background-repeat: repeat-x;
+  background-size: 70%;
+  -webkit-background-clip: text;
+  -webkit-animation: animateWater 30s linear infinite;
+          animation: animateWater 30s linear infinite;
+}
+
+@-webkit-keyframes animateWater {
+  0% {
+    background-position: left 0px top 250px;
+  }
+  20% {
+    background-position: left 100px top 230px;
+  }
+  40% {
+    background-position: left 200px top 190px;
+  }
+  60% {
+    background-position: left 300px top 210px;
+  }
+  80% {
+    background-position: left 200px top 230px;
+  }
+  100% {
+    background-position: left 0px top 250px;
+  }
+}
+
+@keyframes animateWater {
+  0% {
+    background-position: left 0px top 250px;
+  }
+  20% {
+    background-position: left 100px top 230px;
+  }
+  40% {
+    background-position: left 200px top 190px;
+  }
+  60% {
+    background-position: left 300px top 210px;
+  }
+  80% {
+    background-position: left 200px top 230px;
+  }
+  100% {
+    background-position: left 0px top 250px;
+  }
+}/*# sourceMappingURL=water.css.map */

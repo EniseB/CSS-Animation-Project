@@ -1,0 +1,154 @@
+.teaBody {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    // background-color: rgb(239, 203, 160);
+    background-color: rgb(182, 138, 64);
+
+    .container {
+        position: relative;
+        top: 3.125rem;
+
+        .plate {
+            position: absolute;
+            bottom: -4rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40rem;
+            height: 15rem;
+            background: linear-gradient(to right, rgb(104, 155, 157), rgb(69, 112, 114));
+            border-radius: 50%;
+            box-shadow: 0 35px 35px rgba(0,0,0,0.2);
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0.625rem;
+                left: 0.625rem;
+                bottom: 0.625rem;
+                right: 0.625rem;
+                border-radius: 50%;
+                background: linear-gradient(to left, rgb(164, 218, 221), rgb(117, 193, 197))
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 1.875rem;
+                left: 1.875rem;
+                bottom: 1.875rem;
+                right: 1.875rem;
+                background: radial-gradient(rgba(0, 0, 0, 0.376) 25%, transparent, transparent);
+                border-radius: 50%;
+            }
+        }
+
+        .cup {
+            position: relative;
+            width: 27.5rem;
+            height: 18.75rem;
+            background: linear-gradient(to right, rgb(204, 242, 244), rgb(153, 219, 222));
+            border-bottom-left-radius: 45%;
+            border-bottom-right-radius: 45%;
+
+            &-top {
+                position: absolute;
+                top: -1.875rem;
+                left: 0;
+                width: 100%;
+                height: 3.75rem;
+                background: linear-gradient(to right, rgb(204, 242, 244), rgb(153, 219, 222));
+                border-radius: 50%;
+
+                .steam {
+                    position: relative;
+                    display: flex;
+                    z-index: 1;
+                    padding: 0 1.25rem;
+
+                    span {
+                        position: relative;
+                        bottom: 3.5rem;
+                        display: block;
+                        margin: 0 0.125rem 3.125rem;
+                        min-width: 0.5rem;
+                        height: 9rem;
+                        background-color: whitesmoke;
+                        border-radius: 50%;
+                        animation: animateSteam 10s linear infinite;
+                        opacity: 0;
+                        filter: blur(0.5rem);
+                        animation-delay: calc(var(--i) * -0.5s);
+
+                        
+                    }
+                    
+                }
+
+                &-circle {
+                    position: absolute;
+                    top: 0.313rem;
+                    left: 0.625rem;
+                    width: calc(100% - 1.25rem);
+                    height: 3.125rem;
+                    background: linear-gradient(to left, rgb(204, 242, 244), rgb(153, 219, 222));
+                    border-radius: 50%;
+                    box-sizing: border-box;
+                    overflow: hidden;
+                    
+                    &-liquid {
+                        position: absolute;
+                        top: 1rem;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(rgb(116, 88, 46), rgb(83, 59, 24));
+                        border-radius: 50%;
+                        
+                    }
+                }}
+            
+            .handle {
+                position: absolute;
+                right: -5.1rem;
+                top: 2rem;
+                width: 5rem;
+                height: 4rem;
+                border: 45px solid rgb(153, 219, 222);
+                border-left: 45px solid transparent;
+                border-top: 45px solid transparent;
+                border-radius: 50%;
+                transform: rotate(310deg);
+            }
+        }
+    }
+
+    
+    }
+    @keyframes animateSteam {
+        0% {
+            transform: translateY(0) scaleX(1);
+            opacity: 0;
+        }
+        15% {
+            opacity: 1;
+        }
+    
+        50% {
+            transform: translateY(-9.375rem) scaleX(5);
+            opacity: 0;
+        }
+        95% {
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(-38rem) scaleX(10);
+            opacity: 0;
+        }
+
+    }
