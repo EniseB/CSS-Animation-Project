@@ -1,0 +1,150 @@
+.panelBody {
+  margin: 0 auto;
+  padding: 5rem 0;
+  box-sizing: border-box;
+  background-color: rgb(10, 7, 29);
+  font-family: "Chakra Petch", sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  // a {
+  // text-align: center;
+  // }
+  .box {
+    position: relative;
+    width: 30rem;
+    height: 8rem;
+    margin: 1rem;
+    background-color: rgb(43, 48, 48);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    &.one {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 31rem;
+        height: 31rem;
+
+        background-image: conic-gradient(
+          transparent,
+          transparent,
+          transparent,
+          rgb(71, 219, 235)
+        );
+        animation: animate 4s linear infinite;
+        animation-delay: -4s;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 31rem;
+        height: 31rem;
+        background-image: conic-gradient(
+          transparent,
+          transparent,
+          transparent,
+          rgb(232, 71, 235)
+        );
+        animation: animate 4s linear infinite;
+        animation-delay: -6s;
+      }
+    }
+    &.two {
+        &::before {
+          content: "";
+          position: absolute;
+          width: 31rem;
+          height: 31rem;
+  
+          background-image: conic-gradient(
+            transparent,
+            transparent,
+            transparent,
+            rgb(68, 225, 86)
+          );
+          animation: animate 4s linear infinite;
+          animation-direction: reverse;
+          animation-delay: -1s;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          width: 31rem;
+          height: 31rem;
+          background-image: conic-gradient(
+            transparent,
+            transparent,
+            transparent,
+            rgb(220, 149, 28)
+          );
+          animation: animate 4s linear infinite;
+          animation-direction: reverse;
+          animation-delay: -3s;
+        }
+      }
+      &.three {
+        &::before {
+          content: "";
+          position: absolute;
+          width: 31rem;
+          height: 31rem;
+  
+          background-image: conic-gradient(
+            transparent,
+            transparent,
+            transparent,
+            rgb(221, 44, 38)
+          );
+          animation: animate 4s linear infinite;
+          animation-delay: -8s;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          width: 31rem;
+          height: 31rem;
+          background-image: conic-gradient(
+            transparent,
+            transparent,
+            transparent,
+            rgb(255, 241, 47)
+          );
+          animation: animate 4s linear infinite;
+          animation-delay: -10s;
+        }
+      }
+
+    @keyframes animate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    span {
+        position: absolute;
+        inset: 5px;
+        background-color: black;
+        z-index: 1;
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            
+        }
+        .one {
+            color: rgb(71, 219, 235);
+        }
+        .two {
+            color: rgb(220, 149, 28);
+        }
+        .three {
+            color: rgb(255, 241, 47);
+        }
+    }
+  }
+}

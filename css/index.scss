@@ -3,7 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Merriweather Sans", sans-serif;
-  background-color: grey;
+  background-image: url(/images/jail.jpg);
+  background-size: cover;
   overflow: hidden;
   .circle {
     position: absolute;
@@ -62,7 +63,8 @@
       right: 24rem;
       bottom: 24rem;
       left: 24rem;
-      animation-delay: 0.8s;
+      animation-delay: .8s;
+      
     }
     span:before {
       content: attr(data-text);
@@ -72,7 +74,7 @@
       transform: translate(-50%, -50%);
       font-size: 13rem;
       text-transform: uppercase;
-      color: aliceblue;
+      color: rgb(90, 242, 64);
     }
     span:after {
       content: "";
