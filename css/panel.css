@@ -8,7 +8,22 @@
   justify-content: center;
   flex-wrap: wrap;
 }
-.panelBody .box {
+.panelBody a .one,
+.panelBody a .three {
+  background: -webkit-linear-gradient(rgb(71, 219, 235), rgb(232, 71, 235));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.panelBody a .two {
+  background: -webkit-linear-gradient(rgb(232, 71, 235), rgb(71, 219, 235));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.panelBody a:hover {
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.477);
+}
+
+.box {
   position: relative;
   width: 30rem;
   height: 8rem;
@@ -20,75 +35,53 @@
   align-items: center;
   overflow: hidden;
 }
-.panelBody .box.one::before {
+.box.one::before, .box.three::before {
   content: "";
   position: absolute;
   width: 31rem;
   height: 31rem;
   background-image: conic-gradient(transparent, transparent, transparent, rgb(71, 219, 235));
-  -webkit-animation: animate 4s linear infinite;
-          animation: animate 4s linear infinite;
+  -webkit-animation: animateFrame 4s linear infinite;
+          animation: animateFrame 4s linear infinite;
   -webkit-animation-delay: -4s;
           animation-delay: -4s;
 }
-.panelBody .box.one::after {
+.box.one::after, .box.three::after {
   content: "";
   position: absolute;
   width: 31rem;
   height: 31rem;
   background-image: conic-gradient(transparent, transparent, transparent, rgb(232, 71, 235));
-  -webkit-animation: animate 4s linear infinite;
-          animation: animate 4s linear infinite;
+  -webkit-animation: animateFrame 4s linear infinite;
+          animation: animateFrame 4s linear infinite;
   -webkit-animation-delay: -6s;
           animation-delay: -6s;
 }
-.panelBody .box.two::before {
+.box.two::before {
   content: "";
   position: absolute;
   width: 31rem;
   height: 31rem;
-  background-image: conic-gradient(transparent, transparent, transparent, rgb(68, 225, 86));
-  -webkit-animation: animate 4s linear infinite;
-          animation: animate 4s linear infinite;
+  background-image: conic-gradient(transparent, transparent, transparent, rgb(71, 219, 235));
+  -webkit-animation: animateFrame 4s linear infinite;
+          animation: animateFrame 4s linear infinite;
   animation-direction: reverse;
-  -webkit-animation-delay: -1s;
-          animation-delay: -1s;
+  -webkit-animation-delay: -4s;
+          animation-delay: -4s;
 }
-.panelBody .box.two::after {
+.box.two::after {
   content: "";
   position: absolute;
   width: 31rem;
   height: 31rem;
-  background-image: conic-gradient(transparent, transparent, transparent, rgb(220, 149, 28));
-  -webkit-animation: animate 4s linear infinite;
-          animation: animate 4s linear infinite;
+  background-image: conic-gradient(transparent, transparent, transparent, rgb(232, 71, 235));
+  -webkit-animation: animateFrame 4s linear infinite;
+          animation: animateFrame 4s linear infinite;
   animation-direction: reverse;
-  -webkit-animation-delay: -3s;
-          animation-delay: -3s;
+  -webkit-animation-delay: -6s;
+          animation-delay: -6s;
 }
-.panelBody .box.three::before {
-  content: "";
-  position: absolute;
-  width: 31rem;
-  height: 31rem;
-  background-image: conic-gradient(transparent, transparent, transparent, rgb(221, 44, 38));
-  -webkit-animation: animate 4s linear infinite;
-          animation: animate 4s linear infinite;
-  -webkit-animation-delay: -8s;
-          animation-delay: -8s;
-}
-.panelBody .box.three::after {
-  content: "";
-  position: absolute;
-  width: 31rem;
-  height: 31rem;
-  background-image: conic-gradient(transparent, transparent, transparent, rgb(255, 241, 47));
-  -webkit-animation: animate 4s linear infinite;
-          animation: animate 4s linear infinite;
-  -webkit-animation-delay: -10s;
-          animation-delay: -10s;
-}
-@-webkit-keyframes animate {
+@-webkit-keyframes animateFrame {
   0% {
     transform: rotate(0deg);
   }
@@ -96,7 +89,7 @@
     transform: rotate(360deg);
   }
 }
-@keyframes animate {
+@keyframes animateFrame {
   0% {
     transform: rotate(0deg);
   }
@@ -104,22 +97,21 @@
     transform: rotate(360deg);
   }
 }
-.panelBody .box span {
+.box span {
   position: absolute;
   inset: 5px;
   background-color: black;
   z-index: 1;
 }
-.panelBody .box span h2 {
+.box span h2 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 5rem;
+  margin: 0;
+  padding-top: 0.3rem;
 }
-.panelBody .box span .one {
-  color: rgb(71, 219, 235);
-}
-.panelBody .box span .two {
-  color: rgb(220, 149, 28);
-}
-.panelBody .box span .three {
-  color: rgb(255, 241, 47);
+.box span h2:hover {
+  background: -webkit-linear-gradient(rgb(232, 71, 235), rgb(71, 219, 235));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.477);
 }/*# sourceMappingURL=panel.css.map */

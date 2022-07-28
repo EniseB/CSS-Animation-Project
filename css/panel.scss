@@ -7,144 +7,160 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  // a {
-  // text-align: center;
+  a {
+    .one,
+    .three {
+    //   color: rgb(71, 219, 235);
+
+      background: -webkit-linear-gradient(rgb(71, 219, 235), rgb(232, 71, 235));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      
+    }
+    .two {
+    //   color: rgb(232, 71, 235);
+      background: -webkit-linear-gradient(rgb(232, 71, 235), rgb(71, 219, 235));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &:hover {
+        text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.477);
+        }
+  }
+}
+.box {
+  position: relative;
+  width: 30rem;
+  height: 8rem;
+  margin: 1rem;
+  background-color: rgb(43, 48, 48);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  &.one,
+  &.three {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 31rem;
+      height: 31rem;
+
+      background-image: conic-gradient(
+        transparent,
+        transparent,
+        transparent,
+        rgb(71, 219, 235)
+      );
+      animation: animateFrame 4s linear infinite;
+      animation-delay: -4s;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 31rem;
+      height: 31rem;
+      background-image: conic-gradient(
+        transparent,
+        transparent,
+        transparent,
+        rgb(232, 71, 235)
+      );
+      animation: animateFrame 4s linear infinite;
+      animation-delay: -6s;
+    }
+  }
+  &.two {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 31rem;
+      height: 31rem;
+
+      background-image: conic-gradient(
+        transparent,
+        transparent,
+        transparent,
+        rgb(71, 219, 235)
+      );
+      animation: animateFrame 4s linear infinite;
+      animation-direction: reverse;
+      animation-delay: -4s;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 31rem;
+      height: 31rem;
+      background-image: conic-gradient(
+        transparent,
+        transparent,
+        transparent,
+        rgb(232, 71, 235)
+      );
+      animation: animateFrame 4s linear infinite;
+      animation-direction: reverse;
+      animation-delay: -6s;
+    }
+  }
+  // &.three {
+  //   &::before {
+  //     content: "";
+  //     position: absolute;
+  //     width: 31rem;
+  //     height: 31rem;
+
+  //     background-image: conic-gradient(
+  //       transparent,
+  //       transparent,
+  //       transparent,
+  //       rgb(221, 44, 38)
+  //     );
+  //     animation: animateFrame 4s linear infinite;
+  //     animation-delay: -8s;
+  //   }
+  //   &::after {
+  //     content: "";
+  //     position: absolute;
+  //     width: 31rem;
+  //     height: 31rem;
+  //     background-image: conic-gradient(
+  //       transparent,
+  //       transparent,
+  //       transparent,
+  //       rgb(255, 241, 47)
+  //     );
+  //     animation: animateFrame 4s linear infinite;
+  //     animation-delay: -10s;
+  //   }
   // }
-  .box {
-    position: relative;
-    width: 30rem;
-    height: 8rem;
-    margin: 1rem;
-    background-color: rgb(43, 48, 48);
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
 
-    &.one {
-      &::before {
-        content: "";
-        position: absolute;
-        width: 31rem;
-        height: 31rem;
-
-        background-image: conic-gradient(
-          transparent,
-          transparent,
-          transparent,
-          rgb(71, 219, 235)
-        );
-        animation: animate 4s linear infinite;
-        animation-delay: -4s;
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        width: 31rem;
-        height: 31rem;
-        background-image: conic-gradient(
-          transparent,
-          transparent,
-          transparent,
-          rgb(232, 71, 235)
-        );
-        animation: animate 4s linear infinite;
-        animation-delay: -6s;
-      }
+  @keyframes animateFrame {
+    0% {
+      transform: rotate(0deg);
     }
-    &.two {
-        &::before {
-          content: "";
-          position: absolute;
-          width: 31rem;
-          height: 31rem;
-  
-          background-image: conic-gradient(
-            transparent,
-            transparent,
-            transparent,
-            rgb(68, 225, 86)
-          );
-          animation: animate 4s linear infinite;
-          animation-direction: reverse;
-          animation-delay: -1s;
-        }
-        &::after {
-          content: "";
-          position: absolute;
-          width: 31rem;
-          height: 31rem;
-          background-image: conic-gradient(
-            transparent,
-            transparent,
-            transparent,
-            rgb(220, 149, 28)
-          );
-          animation: animate 4s linear infinite;
-          animation-direction: reverse;
-          animation-delay: -3s;
-        }
-      }
-      &.three {
-        &::before {
-          content: "";
-          position: absolute;
-          width: 31rem;
-          height: 31rem;
-  
-          background-image: conic-gradient(
-            transparent,
-            transparent,
-            transparent,
-            rgb(221, 44, 38)
-          );
-          animation: animate 4s linear infinite;
-          animation-delay: -8s;
-        }
-        &::after {
-          content: "";
-          position: absolute;
-          width: 31rem;
-          height: 31rem;
-          background-image: conic-gradient(
-            transparent,
-            transparent,
-            transparent,
-            rgb(255, 241, 47)
-          );
-          animation: animate 4s linear infinite;
-          animation-delay: -10s;
-        }
-      }
-
-    @keyframes animate {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
+    100% {
+      transform: rotate(360deg);
     }
-    span {
-        position: absolute;
-        inset: 5px;
-        background-color: black;
-        z-index: 1;
-        h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            
-        }
-        .one {
-            color: rgb(71, 219, 235);
-        }
-        .two {
-            color: rgb(220, 149, 28);
-        }
-        .three {
-            color: rgb(255, 241, 47);
-        }
+  }
+  span {
+    position: absolute;
+    inset: 5px;
+    background-color: black;
+    z-index: 1;
+    h2 {
+      text-align: center;
+      font-size: 5rem;
+      margin: 0;
+      padding-top: 0.3rem;
+      &:hover {
+        background: -webkit-linear-gradient(rgb(232, 71, 235), rgb(71, 219, 235));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.477);
+      }
     }
   }
 }

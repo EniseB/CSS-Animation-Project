@@ -50,6 +50,7 @@
           animation-delay: 0s;
 }
 .spinningBody .circle span:nth-child(2) {
+  background-image: url(/images/jail.jpg);
   top: 9rem;
   right: 9rem;
   bottom: 9rem;
