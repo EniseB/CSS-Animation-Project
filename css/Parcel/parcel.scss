@@ -14,7 +14,7 @@
     transform-style: preserve-3d;
 
     // rotate the box
-    animation: rotate 10s linear infinite;
+    animation: rotateParcel 10s linear infinite;
     &:hover {
       animation: alternate-reverse rotateAlt 10s linear infinite;
     }
@@ -29,7 +29,7 @@
       transform: rotateX(90deg) translateZ(-15.625rem);
       filter: blur(15px);
     }
-    @keyframes rotate {
+    @keyframes rotateParcel {
       0% {
         transform: rotateX(-30deg) rotateY(360deg);
       }

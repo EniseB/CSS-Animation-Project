@@ -13,8 +13,8 @@
   width: 18.75rem;
   height: 18.75rem;
   transform-style: preserve-3d;
-  -webkit-animation: rotate 10s linear infinite;
-          animation: rotate 10s linear infinite;
+  -webkit-animation: rotateParcel 10s linear infinite;
+          animation: rotateParcel 10s linear infinite;
 }
 .parcelBody .parcel:hover {
   animation: alternate-reverse rotateAlt 10s linear infinite;
@@ -30,7 +30,7 @@
   transform: rotateX(90deg) translateZ(-15.625rem);
   filter: blur(15px);
 }
-@-webkit-keyframes rotate {
+@-webkit-keyframes rotateParcel {
   0% {
     transform: rotateX(-30deg) rotateY(360deg);
   }
@@ -38,7 +38,7 @@
     transform: rotateX(-30deg) rotateY(0deg);
   }
 }
-@keyframes rotate {
+@keyframes rotateParcel {
   0% {
     transform: rotateX(-30deg) rotateY(360deg);
   }
