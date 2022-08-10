@@ -22,10 +22,10 @@
   border-radius: 50%;
   overflow: hidden;
   background-color: #222;
-  -webkit-animation: animate 6s cubic-bezier(0.64, -0.56, 0.36, 1.56) infinite;
-          animation: animate 6s cubic-bezier(0.64, -0.56, 0.36, 1.56) infinite;
+  -webkit-animation: rotate 6s cubic-bezier(0.64, -0.56, 0.36, 1.56) infinite;
+          animation: rotate 6s cubic-bezier(0.64, -0.56, 0.36, 1.56) infinite;
 }
-@-webkit-keyframes animate {
+@-webkit-keyframes rotate {
   0% {
     transform: rotate(0deg);
   }
@@ -33,7 +33,7 @@
     transform: rotate(360deg);
   }
 }
-@keyframes animate {
+@keyframes rotate {
   0% {
     transform: rotate(0deg);
   }

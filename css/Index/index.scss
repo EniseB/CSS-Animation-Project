@@ -20,9 +20,9 @@
       border-radius: 50%;
       overflow: hidden;
       background-color: #222;
-      animation: animate 6s cubic-bezier(.64, -.56, .36, 1.56) infinite;
+      animation: rotate 6s cubic-bezier(.64, -.56, .36, 1.56) infinite;
     }
-    @keyframes animate {
+    @keyframes rotate {
       0% {
         transform: rotate(0deg);
       }

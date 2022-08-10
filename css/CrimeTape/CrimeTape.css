@@ -1,0 +1,94 @@
+.crimeBody {
+  font-family: "Work Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url(/images/asylum.jpeg);
+  background-size: cover;
+}
+.crimeBody section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.crimeBody section .scroll {
+  width: 100%;
+  display: flex;
+}
+.crimeBody section .scroll div {
+  color: black;
+  font-size: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: rgb(255, 208, 0);
+  white-space: nowrap;
+  text-transform: uppercase;
+  -webkit-animation: roll 40s linear infinite;
+          animation: roll 40s linear infinite;
+  -webkit-animation-delay: -40s;
+          animation-delay: -40s;
+}
+.crimeBody section .scroll div span {
+  -webkit-text-stroke: 2px black;
+  color: transparent;
+}
+.crimeBody section .scroll div:nth-child(2) {
+  -webkit-animation: roll2 40s linear infinite;
+          animation: roll2 40s linear infinite;
+  -webkit-animation-delay: -20s;
+          animation-delay: -20s;
+}
+.crimeBody section .text1 {
+  transform: rotate(30deg) translateY(12.5rem) translateX(-20%);
+  box-shadow: 0 5px 15px rgb(21, 21, 21);
+}
+.crimeBody section .text2 {
+  transform: rotate(-25deg) translateY(9rem) translateX(-20%);
+  box-shadow: 0 5px 15px rgb(21, 21, 21);
+}
+.crimeBody section .text3 {
+  transform: rotate(25deg) translateY(38.75rem) translateX(-20%);
+  box-shadow: 0 5px 15px rgb(21, 21, 21);
+}
+.crimeBody section .text4 {
+  transform: rotate(-2deg) translateY(-9.375rem) translateX(-20%);
+  box-shadow: 0 5px 15px rgb(21, 21, 21);
+}
+.crimeBody section .text5 {
+  transform: rotate(5deg) translateY(15.625rem) translateX(-20%);
+  box-shadow: 0 5px 15px rgb(21, 21, 21);
+}
+
+@-webkit-keyframes roll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes roll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes roll2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+@keyframes roll2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}/*# sourceMappingURL=CrimeTape.css.map */
